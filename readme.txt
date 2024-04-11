@@ -6,7 +6,7 @@ This program is designed to take in up to 8 command line arguments in the order
 	float 	max 			(used for xmax, ymax, zmax)
 	float	isoval
 	int 	function		which function to use, 1 is sphere, 2 is sinusoidal waves, 3 is horizontal hyperboloid, defaults to 1 if invalid input
-	bool	liveRender		should it render live, 0 for no, non-0 for yes
+	REMOVED: bool	liveRender		should it render live, 0 for no, non-0 for yes. Caused issues when asapted from 3-d marchingCubes live render, so this feature is removed
 	
 Within the window it will draw a box enclosing the drawing area (min, max) and the axes within it
 If live rendering, it will render all values at an x-value each draw loop
@@ -17,14 +17,13 @@ To use this program, you need a working version of C++, a C++ compiler, OpenGL, 
 Once all the requirements are met, to compile this program:
     On Windows: 
         1. In command prompt, in directory to the one where the program is
-        2. Input "g++ assign3.cpp -lglfw3 -lopengl32 -lglew32"
+        2. Input "g++ marchingTess.cpp -lglfw3 -lopengl32 -lglew32"
         3. Run the executable with "a.exe (int windowWidth) (int windowHeight) (float stepsize) (float min) (float max) (float isoval) (int function) (int liveRender)"
 			values are optioonal, but need to be in this order and earlier ones are needed to have subsequent ones
-        4. The program is open now (hopefully)
+        4. You now see your function visualised (hopefully)
     
     On Linux or Mac:
-		idk google it
-
+		idk google it if you don't know how to compile
 
 When the window is open, camera can be controlled with:
 W to rotate model up (as if camera moves down)
